@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gangues dos Elfos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🏞️</div>
+    <h1>Gangues dos Elfos</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('filmes')">Filmes</a></li>
+      <li><a href="#" onclick="showSection('graficos')">Gráficos</a></li>
+    </ul>
+  </nav>
+
+  <section id="filmes">
+    <ul>
+      <li onclick="showDetails(0)">Veloses e Furiosos <img src="veloses.jpg" alt="Veloses e Furiosos"></li>
+      <li onclick="showDetails(1)">Pânico 4 <img src="panico.jpg" alt="Pânico 4"></li>
+      <li onclick="showDetails(2)">Nós <img src="nos.jpg" alt="Nós"></li>
+      <li onclick="showDetails(3)">Vingadores <img src="vingadores.jpg" alt="Vingadores"></li>
+      <li onclick="showDetails(4)">Espetacular Homem Aranha <img src="homemaranha.jpg" alt="Espetacular Homem Aranha"></li>
+      <li onclick="showDetails(5)">Os Fantasmas Ainda Se Divertem <img src="fantasmas.jpg" alt="Os Fantasmas Ainda Se Divertem"></li>
+      <li onclick="showDetails(6)">IT <img src="it.jpg" alt="IT"></li>
+      <li onclick="showDetails(7)">Homem Aranha: Sem Volta Para Casa <img src="semvolta.jpg" alt="Homem Aranha: Sem Volta Para Casa"></li>
+      <li onclick="showDetails(8)">Rei Leão <img src="reileao.jpg" alt="Rei Leão"></li>
+      <li onclick="showDetails(9)">Corra <img src="corra.jpg" alt="Corra"></li>
+      <li onclick="showDetails(10)">Frozen <img src="frozen.jpg" alt="Frozen"></li>
+      <li onclick="showDetails(11)">Descendentes 4 <img src="descendentes.jpg" alt="Descendentes 4"></li>
+      <li onclick="showDetails(12)">Slenderman <img src="slenderman.jpg" alt="Slenderman"></li>
+      <li onclick="showDetails(13)">Carrossel 2 <img src="carrossel.jpg" alt="Carrossel 2"></li>
+    </ul>
+    <div id="detalhes-filme"></div>
+  </section>
+
+  <section id="graficos" style="display: none;">
+    <canvas id="graficoGeral"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
