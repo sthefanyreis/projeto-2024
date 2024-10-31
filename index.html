@@ -1,49 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gangues dos Elfos</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <header>
-    <div class="logo"><img src="logo.png" alt="logo"></div>
-    <h1>Gangues dos Elfos</h1>
-  </header>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <nav>
-    <ul>
-      <li><a href="#" onclick="showSection('filmes')">Filmes</a></li>
-      <li><a href="#" onclick="showSection('graficos')">Gráficos</a></li>
-    </ul>
-  </nav>
+    <title>Disney Plus</title>
+    <meta name="description" content="Plataforma do disney plus" />
 
-  <section id="filmes">
-    <ul>
-      <li onclick="showDetails(0)">Veloses e Furiosos <img src="velozes.png" alt="Veloses e Furiosos"></li>
-      <li onclick="showDetails(1)">Pânico 4 <img src="panico.jpg" alt="Pânico 4"></li>
-      <li onclick="showDetails(2)">Nós <img src="nos.jpg" alt="Nós"></li>
-      <li onclick="showDetails(3)">Vingadores <img src="vingadores.webp" alt="Vingadores"></li>
-      <li onclick="showDetails(4)">Espetacular Homem Aranha <img src="espetacular.jpeg" alt="Espetacular Homem Aranha"></li>
-      <li onclick="showDetails(5)">Os Fantasmas Ainda Se Divertem <img src="fantasma.jpg" alt="Os Fantasmas Ainda Se Divertem"></li>
-      <li onclick="showDetails(6)">IT <img src="it.jpg" alt="IT"></li>
-      <li onclick="showDetails(7)">Homem Aranha: Sem Volta Para Casa <img src="homenaranha.jpg" alt="Homem Aranha: Sem Volta Para Casa"></li>
-      <li onclick="showDetails(8)">carros <img src="carros.jpg" alt="carros"></li>
-      <li onclick="showDetails(9)">deadpool e wolverine  <img src="deadpool.jpg" alt="deadpool e wolverine"></li>
-      <li onclick="showDetails(10)">Frozen <img src="frozen.jpg" alt="Frozen"></li>
-      <li onclick="showDetails(11)">Descendentes 4 <img src="descendentes.jpg" alt="Descendentes 4"></li>
-      <li onclick="showDetails(12)">Slenderman <img src="slenderman.jpg" alt="Slenderman"></li>
-      <li onclick="showDetails(13)">crepusculo lua nova <img src="cre.jpg" alt="crepusculo lua nova"></li>
-    </ul>
-    <div id="detalhes-filme"></div>
-  </section>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.ico" />
 
-  <section id="graficos" style="display: none;">
-    <canvas id="graficoGeral" width="1200" height="600"></canvas>
-  </section>  
- 
-  <script src="script.js"></script>
-</body>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="./styles/global.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Imagem do filme destaque"
+          src="https://image.tmdb.org/t/p/original/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg"
+        />
+      </div>
+
+      <header>
+        <img src="/assets/logo.png" alt="Logo da disney plus" />
+
+        <button type="button" class="button__menu" onclick="changeButtonMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="navigation">
+          <h2>Movies</h2>
+
+          <form class="form" id="add__movie">
+            <input type="text" placeholder="Adicione o seu filme" name="movie" />
+
+            <button type="submit">
+              +
+            </button>
+          </form>
+
+          <ul id="movies">
+
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="feature__movie">
+          <div class="rating">
+            <img src="/assets/logo-imdb.png" alt="Logo da IMDB" />
+            <strong></strong>
+          </div>
+
+          <!-- DATA DE LANÇAMENTO, CATEGORIA -->
+          <span></span>
+          <!-- TITULO DO FILME -->
+          <h1></h1>
+          <!-- SINOPSE DO FILME -->
+          <p></p>
+
+          <button type="button">
+            <img src="/assets/icon-play.png" alt="Icon play">
+            Assistir agora
+          </button>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
